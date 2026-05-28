@@ -6,10 +6,6 @@ exports.getAboutPage = (req, res) => {
     res.render("about", {title: "About"});
 };
 
-exports.getAddHabitPage = (req, res) => {
-    res.render("addHabit", {title: "Add Habit"});
-};
-
 exports.getBlogPage = (req, res) => {
     res.render("blog", {title: "Motivation Blog"});
 };
@@ -19,7 +15,7 @@ exports.getContactPage = (req, res) => {
 };
 
 exports.getDashboardPage = (req, res) => {
-    res.render("addHabit", {title: "Dashboard"});
+    res.render("dashboard", {title: "Dashboard"});
 };
 
 exports.getThanksPage = (req, res) => {
