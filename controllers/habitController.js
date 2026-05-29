@@ -9,7 +9,7 @@ exports.saveHabit = async (req, res, next) => {
     try {
         const newHabit = new Habit({habitName, category, frequency});
         await newHabit.save();
-        res.render("/dashboard");
+        res.redirect("/dashboard");
     } catch (error){
         next(error);
     }
@@ -19,7 +19,7 @@ exports.deleteHabit = async (req, res, next) => {
     let habitId = req.params.id;
     try {
         await Habit.findByIdAndDelete(habitId);
-        res.render("/dashboard");
+        res.redirect("/dashboard");
     } catch (error) {
         next(error);
     }
@@ -29,7 +29,7 @@ exports.completeHabit = async (req, res, next) => {
     let habitId = req.params.id;
     try {
         await Habit.findByIdAndUpdate(habitId, {isCompleted: true});
-        res.render("/dashboard");
+        res.redirect("/dashboard");
     } catch (error) {
         next(error);
     }

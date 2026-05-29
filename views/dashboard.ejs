@@ -1,5 +1,28 @@
 <div class = "container">
+    <h1>Your Dashboard</h1>
     <div class = "content-box">
-        <h1>Your Dashboard</h1>
+
+        <a href="/add-habit" class="button">Create a New Habit</a>
+
+        <div class = "list-container">
+            <% habits.forEach( habit => { %>
+                <div class = habit-card>
+                <p>
+                    <span class="habit-label">Habit:</span>
+                    <%= habit.habitName %>
+                </p>
+                
+                <p>
+                    <span class="habit-label">Category:</span>
+                    <%= habit.category %>
+                </p>
+                <p>
+                    <span class="habit-label">Frequency:</span>
+                    <%= habit.frequency %>
+                </p>
+
+                </div>
+           <% }); %>
+        </div>
     </div>
 </div>
