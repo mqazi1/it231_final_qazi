@@ -14,10 +14,6 @@ exports.getContactPage = (req, res) => {
     res.render("contact", {title: "Contact"});
 };
 
-exports.getDashboardPage = (req, res) => {
-    res.render("dashboard", {title: "Dashboard"});
-};
-
 exports.getThanksPage = (req, res) => {
     res.render("thanks", {title: "Confirmation"});
 };

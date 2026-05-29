@@ -2,6 +2,7 @@ const express = require("express"),
     app = express(),
     errorController = require("./controllers/errorController"),
     homeController = require("./controllers/homeController"),
+    habitController = require("./controllers/habitController")
 
     mongoose = require("mongoose"),
     layouts = require("express-ejs-layouts");
@@ -27,6 +28,10 @@ app.use(
 
 app.use(express.json());
 
+app.get("/", homeController.getHomePage);
+app.get("/about", homeController.getAboutPage);
+app.get("/blog", homeController.getBlogPage);
+app.get("/dashboard", habitController.getAllHabits);
 
 app.listen(app.get("port"), () => {
     console.log(`Success! Connection is secured and the server is live at http://localhost:${app.get("port")}`);
