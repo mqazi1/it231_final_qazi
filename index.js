@@ -32,6 +32,7 @@ app.get("/", homeController.getHomePage);
 app.get("/about", homeController.getAboutPage);
 app.get("/blog", homeController.getBlogPage);
 app.get("/dashboard", habitController.getAllHabits);
+app.get("/contact", homeController.getContactPage);
 
 app.listen(app.get("port"), () => {
     console.log(`Success! Connection is secured and the server is live at http://localhost:${app.get("port")}`);

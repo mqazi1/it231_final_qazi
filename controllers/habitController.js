@@ -25,6 +25,16 @@ exports.deleteHabit = async (req, res, next) => {
     }
 };
 
+exports.completeHabit = async (req, res, next) => {
+    let habitId = req.params.id;
+    try {
+        await Habit.findByIdAndUpdate(habitId, {isCompleted: true});
+        res.render("/dashboard");
+    } catch (error) {
+        next(error);
+    }
+};
+
 exports.getAllHabits = async(req, res, next) => {
     try {
         const habits = await Habit.find();
