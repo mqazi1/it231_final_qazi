@@ -4,6 +4,10 @@ exports.getAddHabitPage = (req, res) => {
     res.render("addHabit", {title: "Add Habit"});
 };
 
+exports.getEditHabitPage = (req, res) => {
+    res.render("editHabit", {title: "Edit Habit"});
+}''
+
 exports.saveHabit = async (req, res, next) => {
     const { habitName, category, frequency } = req.body; 
     try {
@@ -29,6 +33,17 @@ exports.completeHabit = async (req, res, next) => {
     let habitId = req.params.id;
     try {
         await Habit.findByIdAndUpdate(habitId, {isCompleted: true});
+        res.redirect("/dashboard");
+    } catch (error) {
+        next(error);
+    }
+};
+
+exports.editHabit = async (req, res, next) => {
+    let habitId = req.params.id;
+    try {
+        const {habitName, category, frequency} = req.body;
+        await Habit.findByIdAndUpdate(habitId, {habitName, category, frequency});
         res.redirect("/dashboard");
     } catch (error) {
         next(error);

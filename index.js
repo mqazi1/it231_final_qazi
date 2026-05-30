@@ -36,6 +36,9 @@ app.get("/contact", homeController.getContactPage);
 app.get("/add-habit", habitController.getAddHabitPage);
 
 app.post("/add-habit", habitController.saveHabit);
+app.post("/habit/:id/delete", habitController.deleteHabit);
+app.post("/habit/:id/complete", habitController.completeHabit);
+app.post("habit/:id/edit", habitController.editHabit);
 
 app.listen(app.get("port"), () => {
     console.log(`Success! Connection is secured and the server is live at http://localhost:${app.get("port")}`);
