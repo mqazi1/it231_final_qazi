@@ -5,7 +5,7 @@
         <a href="/add-habit" class="button">Create a New Habit</a>
 
         <div class = "list-container">
-            <% habits.forEach( habit => { %>
+            <% habits.forEach(habit => { %>
                 <div class = "habit-card">
                 <p>
                     <span class="habit-label">Habit:</span>
@@ -19,6 +19,25 @@
                 <p>
                     <span class="habit-label">Frequency:</span>
                     <%= habit.frequency %>
+                </p>
+
+                <p>
+                    <form action = "/habit/<%= habit._id %>/delete" method = "POST">
+                        <button type = "submit">Delete</button>
+                    </form>
+                </p>
+                <% if(habit.isCompleted == false) { %>
+                <p>
+                    <form action = "/habit/<%= habit._id %>/complete" method = "POST">
+                        <button type = "submit">Mark As Complete</button>
+                    </form>
+                </p>
+                <% } %>
+
+                <p>
+                    <form action = "/habit/<%= habit._id %>/edit" method = "POST">
+                        <button type = "submit">Edit</button>
+                    </form>
                 </p>
 
                 </div>

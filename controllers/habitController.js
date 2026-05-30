@@ -6,7 +6,7 @@ exports.getAddHabitPage = (req, res) => {
 
 exports.getEditHabitPage = (req, res) => {
     res.render("editHabit", {title: "Edit Habit"});
-}''
+};
 
 exports.saveHabit = async (req, res, next) => {
     const { habitName, category, frequency } = req.body; 

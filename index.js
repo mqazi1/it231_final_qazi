@@ -2,7 +2,8 @@ const express = require("express"),
     app = express(),
     errorController = require("./controllers/errorController"),
     homeController = require("./controllers/homeController"),
-    habitController = require("./controllers/habitController")
+    habitController = require("./controllers/habitController"),
+    contactController = require("./controllers/contactController")
 
     mongoose = require("mongoose"),
     layouts = require("express-ejs-layouts");
@@ -32,14 +33,15 @@ app.get("/", homeController.getHomePage);
 app.get("/about", homeController.getAboutPage);
 app.get("/blog", homeController.getBlogPage);
 app.get("/dashboard", habitController.getAllHabits);
-app.get("/contact", homeController.getContactPage);
+app.get("/contact", contactController.getContactPage);
 app.get("/add-habit", habitController.getAddHabitPage);
+app.get("/edit-habit", habitController.getEditHabitPage);
 
 app.post("/add-habit", habitController.saveHabit);
 app.post("/habit/:id/delete", habitController.deleteHabit);
 app.post("/habit/:id/complete", habitController.completeHabit);
 app.post("habit/:id/edit", habitController.editHabit);
-
+app.post
 app.listen(app.get("port"), () => {
     console.log(`Success! Connection is secured and the server is live at http://localhost:${app.get("port")}`);
 });
