@@ -4,8 +4,17 @@ exports.getAddHabitPage = (req, res) => {
     res.render("addHabit", {title: "Add Habit"});
 };
 
-exports.getEditHabitPage = (req, res) => {
-    res.render("editHabit", {title: "Edit Habit"});
+exports.getEditHabitPage = async (req, res, next) => {
+    try {
+        const habit = await Habit.findById(req.params.id);
+        res.render("editHabit", {
+            title: "Edit Habit", 
+            habit
+        });
+    } catch (error) {
+        next(error);
+    }
+    
 };
 
 exports.saveHabit = async (req, res, next) => {
