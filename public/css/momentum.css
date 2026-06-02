@@ -1,16 +1,63 @@
+body {
+    margin: 10px;
+    padding: 20px;
+    font-family:'Times New Roman', Times, serif;
+    background-color: #ebf6fa;
+    line-height: 1.5;
+}
+
+h1 {
+    color: #015c7b;
+}
+
 nav {
-    margin: 30px;
-    width: 100%;
-    padding: 15px;
-    border-bottom: 2px solid #A3B18B;
+    margin: 20px;
+    padding: 15px 0;
+    border: 3px solid #015c7b;
     text-align: center;
 }
 
 nav a {
-    color: black;
+    color: #015c7b;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 10px;
     margin: 10px;
     display: inline-block;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.input-form {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 5px;
+
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content-box {
+    padding: 35px;
+    margin: 10px;
+}
+
+p {
+    line-height: 1.5;
+    margin: 15px;
     font-size: large;
+}
+
+.habit-card {
+    background-color: #ffffff;
+    border: 1px solid #015c7b;
+    padding: 20px;
+    min-width: 280;
+}
+
+.habit-label {
+    font-weight: bold;
+    color: #015c7b;
 }

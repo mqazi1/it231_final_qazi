@@ -21,7 +21,8 @@
                     <%= habit.frequency %>
                 </p>
 
-                <p>
+                <div class = "habit-actions">
+                    <p>
                     <form action = "/habit/<%= habit._id %>/delete" method = "POST">
                         <button type = "submit">Delete</button>
                     </form>
@@ -37,6 +38,8 @@
                 <p>
                     <a href="/habit/<%= habit._id %>/edit" class="button">Edit</a>
                 </p>
+                </div>
+                
 
                 </div>
            <% }); %>
