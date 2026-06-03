@@ -12,14 +12,17 @@ h1 {
 }
 
 nav {
-    margin: 20px;
-    padding: 15px 0;
+    margin: 10px;
+    padding: 10px 0;
     border: 3px solid #015c7b;
     text-align: center;
+    background-color: #015c7b;
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 nav a {
-    color: #015c7b;
+    color: #ebf6fa;
     text-decoration: none;
     padding: 10px 10px;
     margin: 10px;
@@ -48,7 +51,7 @@ nav a {
 
 p {
     line-height: 1.5;
-    margin: 15px;
+    margin: auto;
     font-size: large;
 }
 
@@ -59,6 +62,7 @@ p {
     min-width: 280;
     border-radius: 10px;
     box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
 }
 
 .habit-label {
@@ -85,6 +89,18 @@ input[type = "text"] {
     border: 2px solid #015c7b;
     border-radius: 5px;
     line-height: 30px;
+    font-size: medium;
+}
+
+input[type = "email"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #015c7b;
+    border-radius: 5px;
+    line-height: 30px;
+    font-size: medium;
 }
 
 .form-card {
@@ -101,7 +117,7 @@ input[type = "text"] {
     color: #ffffff;
     border-color: #015c7b;
     padding: 10px 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
@@ -117,4 +133,21 @@ label {
     font-size: large;
     font-weight: bold;
     color: #015c7b;
+}
+
+img {
+    width: 75%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.query-card {
+    background-color: #ffffff;
+    border: 2px solid #015c7b;
+    padding: 20px;
+    min-width: 280;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
 }
