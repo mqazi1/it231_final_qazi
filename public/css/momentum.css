@@ -8,6 +8,7 @@ body {
 
 h1 {
     color: #015c7b;
+    text-align: center;
 }
 
 nav {
@@ -40,6 +41,7 @@ nav a {
 }
 
 .content-box {
+    align-items: center;
     padding: 35px;
     margin: 10px;
 }
@@ -52,12 +54,67 @@ p {
 
 .habit-card {
     background-color: #ffffff;
-    border: 1px solid #015c7b;
+    border: 2px solid #015c7b;
     padding: 20px;
     min-width: 280;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 .habit-label {
+    font-weight: bold;
+    color: #015c7b;
+    padding-right: 5px;
+}
+
+.habit-actions {
+    display: inline-flex;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.input-form {
+    margin-bottom: 15px;
+}
+
+input[type = "text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #015c7b;
+    border-radius: 5px;
+    line-height: 30px;
+}
+
+.form-card {
+    align-items: center;
+    padding: 35px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.button, button {
+    background-color: #015c7b;
+    color: #ffffff;
+    border-color: #015c7b;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 12px;
+    cursor: pointer;
+    font-size: medium;
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: large;
     font-weight: bold;
     color: #015c7b;
 }

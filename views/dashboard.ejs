@@ -1,8 +1,10 @@
 <div class = "container">
     <h1>Your Dashboard</h1>
     <div class = "content-box">
-
-        <a href="/add-habit" class="button">Create a New Habit</a>
+        <div style = "margin-bottom: 20px;">
+            <a href="/add-habit" class="button">Add a Habit</a>
+        </div>
+        
 
         <div class = "list-container">
             <% habits.forEach(habit => { %>
@@ -22,22 +24,18 @@
                 </p>
 
                 <div class = "habit-actions">
-                    <p>
                     <form action = "/habit/<%= habit._id %>/delete" method = "POST">
                         <button type = "submit">Delete</button>
                     </form>
-                </p>
+                    
                 <% if(habit.isCompleted == false) { %>
-                <p>
                     <form action = "/habit/<%= habit._id %>/complete" method = "POST">
                         <button type = "submit">Mark As Complete</button>
                     </form>
-                </p>
                 <% } %>
 
-                <p>
                     <a href="/habit/<%= habit._id %>/edit" class="button">Edit</a>
-                </p>
+                
                 </div>
                 
 
