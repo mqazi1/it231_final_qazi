@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express"), 
     app = express(),
     errorController = require("./controllers/errorController"),
@@ -8,9 +10,7 @@ const express = require("express"),
     mongoose = require("mongoose"),
     layouts = require("express-ejs-layouts");
 
-mongoose.connect(
-    "mongodb+srv://mqazi1:Mendes98@cluster0.gevvjfr.mongodb.net/habits?appName=Cluster0"
-)
+mongoose.connect(process.env.MONGO_URI);
 
 const db = mongoose.connection;
 db.once("open", () => {
