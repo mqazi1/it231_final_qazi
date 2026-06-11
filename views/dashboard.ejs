@@ -1,0 +1,48 @@
+<div class = "container">
+    <h1>Your Dashboard</h1>
+    <div class = "content-box">
+        <div style = "margin-bottom: 20px;">
+            <a href="/add-habit" class="button">Add a Habit</a>
+        </div>
+        
+
+        <div class = "list-container">
+            <% habits.forEach(habit => { %>
+                <div class = "habit-card">
+                <p>
+                    <span class="habit-label">Habit:</span>
+                    <%= habit.habitName %>
+                </p>
+                
+                <p>
+                    <span class="habit-label">Category:</span>
+                    <%= habit.category %>
+                </p>
+                <p>
+                    <span class="habit-label">Frequency:</span>
+                    <%= habit.frequency %>
+                </p>
+
+                <div class = "habit-actions">
+                    <form action = "/habit/<%= habit._id %>/delete" method = "POST">
+                        <button type = "submit">Delete</button>
+                    </form>
+                    
+                <% if(habit.isCompleted == false) { %>
+                    <form action = "/habit/<%= habit._id %>/complete" method = "POST">
+                        <button type = "submit">Mark As Complete</button>
+                    </form>
+                <% } %>
+
+                    <a href="/habit/<%= habit._id %>/edit" class="button">Edit</a>
+                
+                </div>
+                
+
+                </div>
+            <% }); %>
+        </div>
+        <img src="/images/journal.jpg" alt="Aesthetic image of a couple sheets of paper with a pen, a coffee mug, and a small vase.">
+        <cite>https://unsplash.com/photos/white-printer-paper-beside-white-ceramic-mug-7jFMs5vzsSQ?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink</cite>
+    </div>
+</div>

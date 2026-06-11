@@ -1,0 +1,29 @@
+{
+  "name": "it231_final_qazi",
+  "version": "1.0.0",
+  "description": "IT231 - Final Project: Momentum",
+  "homepage": "https://github.com/mqazi1/it231_final_qazi#readme",
+  "bugs": {
+    "url": "https://github.com/mqazi1/it231_final_qazi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mqazi1/it231_final_qazi.git"
+  },
+  "license": "ISC",
+  "author": "Maria Qazi",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "express-ejs-layouts": "^2.5.1",
+    "http-status-codes": "^2.3.0",
+    "mongoose": "^9.6.2",
+    "nodemon": "^3.1.14"
+  }
+}

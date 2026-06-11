@@ -1,0 +1,153 @@
+body {
+    margin: 10px;
+    padding: 20px;
+    font-family:'Times New Roman', Times, serif;
+    background-color: #ebf6fa;
+    line-height: 1.5;
+}
+
+h1 {
+    color: #015c7b;
+    text-align: center;
+}
+
+nav {
+    margin: 10px;
+    padding: 10px 0;
+    border: 3px solid #015c7b;
+    text-align: center;
+    background-color: #015c7b;
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+nav a {
+    color: #ebf6fa;
+    text-decoration: none;
+    padding: 10px 10px;
+    margin: 10px;
+    display: inline-block;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.input-form {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 5px;
+
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content-box {
+    align-items: center;
+    padding: 35px;
+    margin: 10px;
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-size: large;
+}
+
+.habit-card {
+    background-color: #ffffff;
+    border: 2px solid #015c7b;
+    padding: 20px;
+    min-width: 280;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
+}
+
+.habit-label {
+    font-weight: bold;
+    color: #015c7b;
+    padding-right: 5px;
+}
+
+.habit-actions {
+    display: inline-flex;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.input-form {
+    margin-bottom: 15px;
+}
+
+input[type = "text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #015c7b;
+    border-radius: 5px;
+    line-height: 30px;
+    font-size: medium;
+}
+
+input[type = "email"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #015c7b;
+    border-radius: 5px;
+    line-height: 30px;
+    font-size: medium;
+}
+
+.form-card {
+    align-items: center;
+    padding: 35px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.button, button {
+    background-color: #015c7b;
+    color: #ffffff;
+    border-color: #015c7b;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 12px;
+    cursor: pointer;
+    font-size: medium;
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: large;
+    font-weight: bold;
+    color: #015c7b;
+}
+
+img {
+    width: 75%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.query-card {
+    background-color: #ffffff;
+    border: 2px solid #015c7b;
+    padding: 20px;
+    min-width: 280;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
+}

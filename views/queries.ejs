@@ -1,0 +1,21 @@
+<div class = "container">
+    <h1>All Queries</h1>
+    <div class = "list-container">
+        <% queries.forEach(query => { %>
+                <div class = "query-card">
+                    <p>
+                        <span>Name:</span>
+                        <%= query.name %>
+                    </p>
+                    <p>
+                        <span>Email:</span>
+                        <%= query.email %>
+                    </p>
+                    <p>
+                        <span>Feedback:</span>
+                        <%= query.feedback %>
+                    </p>
+                </div>
+        <% }) %>
+    </div>
+</div>
